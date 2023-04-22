@@ -24,29 +24,47 @@
     }
 </script>
 
-<a href="#/">Go back</a>
-<a href="#/database_edit/add">Add Data</a>
+<a class="link" href="#/">Go back</a>
+<a class="link" href="#/database_edit/add">Add Data</a>
+<table>
+    {#if list}
+    {#each list as player, i}
+        <tr>
+            <th>{player}</th>
+            <td><a href="#/database_edit/edit " on:click={() => editData(i)}>Edit</a></td>
+            <td><a href="#/database_edit" on:click={() => deleteData(i)}>Delete</a></td>
+        </tr>
+    {/each}
+        
+    {/if}
+</table>
 
-{#if list}
-{#each list as player, i}
-    <div class="entry">
-        <p>{player}</p>
-        <p><a href="#/database_edit/edit " on:click={() => editData(i)}>Edit</a></p>
-        <p><a href="#/database_edit" on:click={() => deleteData(i)}>Delete</a></p>
-    </div>
-{/each}
-    
-{/if}
 
 <!-- This page is to edit the database -->
 
 <style>
-    .entry {
-        display: flex;
-        flex-direction: row;
+    a:link{
+        text-decoration: none;
+        color: white;
     }
-
-    .entry p {
-        margin-right: 10px;
+    a:hover{
+        color: red;
+    }
+    table{
+        position: absolute;
+        top: 10%;
+    }
+    th{
+        color: white;
+        padding: 5px;
+        border: 1px solid rgb(255, 255, 255);
+    }
+    td{
+        text-align: center;
+        border: 1px solid rgb(255, 255, 255);
+        width: 50px;
+    }
+    .link{
+        padding-right: 10px;
     }
 </style>

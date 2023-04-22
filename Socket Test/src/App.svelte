@@ -11,31 +11,26 @@
   import AddData from "./lib/AddData.svelte";
   import EditData from "./lib/EditData.svelte";
 
-  $: processor($socketMessageStore);
+  $: processor($socketMessageStore)
+  
 </script>
 
 <div>
   {#if $url.hash === "" || $url.hash === "#/"}
-    <Main />
+    <Main/>
   {:else if $url.hash === "#/controller"}
     <Controller />
   {:else if $url.hash === "#/database_edit"}
-    <DatabaseEdit />
+    <DatabaseEdit/>
   {:else if $url.hash === "#/database_edit/add"}
-    <AddData />
+    <AddData/>
   {:else if $url.hash === "#/database_edit/edit"}
-    <EditData index={$indexStore} />
+    <EditData index={$indexStore}/>
   {:else if $url.hash === "#/database_query"}
-    <StatQuery />
+    <StatQuery/>
   {:else if $url.hash === "#/sort_data"}
-    <Sort />
+    <Sort/>
   {:else}
     <h1>404</h1>
   {/if}
 </div>
-
-<style>
-  :global(body) {
-    background: #2e3440;
-  }
-</style>
