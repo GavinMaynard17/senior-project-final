@@ -111,10 +111,14 @@
     .player{
         padding-left: 10px;
         margin-top: 3px;
+        color: white;
         
     }
 
     .dropdown{
         height:25px
+    }
+    h1{
+        color: white;
     }
 </style>
