@@ -212,8 +212,7 @@ function handleSocketData($socketMessageStore){
 </div>
 <style>
 .Team1{
-  background-image:linear-gradient( rgb(0, 68, 255),rgb(0, 27, 100));
-  border: 0px;
+  border: 1px solid white;
   border-radius: 10px;
   position: absolute;
   top: 40%;
@@ -221,8 +220,7 @@ function handleSocketData($socketMessageStore){
   height: 150px;
 }
 .Team2{
-  background-image:linear-gradient( rgb(255, 140, 0),rgb(90, 50, 0));
-  border: 0px;
+  border: 1px solid white;
   border-radius: 10px;
   top: 70%;
   position: absolute;
