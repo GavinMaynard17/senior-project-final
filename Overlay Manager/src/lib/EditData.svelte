@@ -56,7 +56,7 @@
 
 <a href="#/database_edit">Go back</a>
 
-<h1>Player #{index}</h1>
+<h1> </h1>
 
 <form>
   <table>

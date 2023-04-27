@@ -18,14 +18,14 @@ export const orangeTeamStore = writable(0)
 export const playersStore = writable([
     {
         name: "GMay",
-        goals: 2,
-        shots: 5,
+        goals: 1,
+        shots: 1,
         assists: 1,
-        saves: 4,
-        demos: 3
+        saves: 1,
+        demos: 1
     },
     {
-        name: "Juno",
+        name: "LAW",
         goals: 2,
         shots: 2,
         assists: 2,

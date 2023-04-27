@@ -81,7 +81,7 @@ const onNewMsg = ({ data }) => {
     orangeNameStore.set(data.orangeName)
     orangeSeriesStore.set(data.orangeScore)
     let gameNum  = data.gameNum
-    if(data.gameNum > data.seriesLength) gameNum-- 
+    if(data.blueScore > data.seriesLength/2-.5 || data.orangeScore > data.seriesLength/2-.5) gameNum-- 
     footerStore.set(`Game ${gameNum} | Best of ${data.seriesLength}`)
     seriesLengthStore.set(data.seriesLength)
 }

@@ -136,17 +136,17 @@ function handleSocketData($socketMessageStore){
   <h3>Best of:</h3>
   <div class="seriesButton">
 
-    <button type="button" on:click={() => (seriesLength = 1)} 
-      on:click={updateData}>1</button>
+    <button type="button" on:click={() => (seriesLength = 1)}>1</button> 
+      <!-- on:click={updateData} -->
 
-    <button type="button" on:click={() => (seriesLength = 3)} 
-      on:click={updateData}>3</button>
+    <button type="button" on:click={() => (seriesLength = 3)} >3</button>
+      <!-- on:click={updateData} -->
 
-    <button type="button" on:click={() => (seriesLength = 5)} 
-      on:click={updateData}>5</button>
+    <button type="button" on:click={() => (seriesLength = 5)} >5</button>
+      <!-- on:click={updateData} -->
 
-    <button type="button" on:click={() => (seriesLength = 7)} 
-      on:click={updateData}>7</button>
+    <button type="button" on:click={() => (seriesLength = 7)} >7</button>
+      <!-- on:click={updateData} -->
 
   </div>
 </div>

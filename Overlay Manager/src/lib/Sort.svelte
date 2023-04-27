@@ -75,6 +75,10 @@
         </div>
     {/each}
 
+    {#if allPlayers.length == 0}
+        <p>No data received</p>
+    {/if}
+
 
     <a href="#/" >
         <button type="button" on:click={submitData}>Submit Data</button>
@@ -84,22 +88,6 @@
 
 
 
-
-
-
-
-
-
-<!-- this section shows how to loop through all data to reach a player name (in svelte, the idea can be transferred to js) -->
-
-    <!-- {#each allData as data, i}
-    {#if i > 0}
-        <h1>Game {i}</h1>
-        {#each data as player}
-            <p>{player.name}</p>
-        {/each}
-    {/if}
-{/each} -->
 
 <style>
 
@@ -118,6 +106,11 @@
     .dropdown{
         height:25px
     }
+
+    p{
+        color: white;
+    }
+
     h1{
         color: white;
     }
